@@ -66,11 +66,83 @@ Terminal
 /var  
 /lost+found 잠금 및 복구를 위한 폴더  
 
+#### ubuntu
+일반 리눅스 배포판 중 가장 많이 사용되는 Debian 계열  
+짝수 해 4월에 LTS (Long Term Support) 버전이 출시  
+정규 버전 6개월 마다 배포되며, 배포일 기준으로 9개월 간 업데이트 및 지원  
+LTS 버전은 2년 마다 배포, 배포일 기준 최대 5년까지 업데이트 및 지원  
 
+#### Linux 설치 및 Linux Command
 
-
-
+Bash(Bourne-Again Shell)  
+현재 리눅스의 표준 쉘  
+Alias : 명령어 및 단축 기능  
+연산, History, 자동 이름 완성, 프롬프트 제어 기능 등이 존재  
   
+다양한 터미널이 존재함. 수업에선 터미네이터를 사용  
+termianl 실행 단축키 Ctrl + Alt + T 
 
+$sudo apt install termianter
+
+sudo -> 관리자 권한으로 이후의 명령어 실행
+apt install -> apt 패캐지 네임으로 설치하겠다.
+terminater -> 설치할 프로그램 명
+
+sudo - 특정 명령어를 관리자 권한으로 실행하는 명령어
+sudo <<사용할 명령어>>
+
+특정 명령어를 관리자 권한(root 권한) 으로 실행  
+비밀번호를 입력하게 나오는데 짧은 비밀번호는 처음 설치할 때만 가능(이후 8자 이상)  
+
+apt(advanced package installer) - 패캐지 설치 관리자  
+sudo apt install <<PACKAGE_name>>  
+필요한 패캐지를 설치할 수 있도록 해주는 관리자  
+
+pwd(Print Working Directory) - 현재 작업 중인 폴더 출력  
+현재 작업 중인 폴더의 절대 경로 출력  
+
+cd (Change Directory) 현재 작업 중인 폴더를 변경  
+절대 경로 및 상대경로 모두 들어갈 수 있음  
+이동 경로 생략 ~  
+뒤로 가기 ../  
+
+Tab 자동 완성 , 설명  
+cd ca (Tab)  
+ca 로 시작하는 폴더 나열  
   
+ls(list contents)  
+$ ls <경로> 
+폴더 내부의 파일 및 폴더 리스트 출력    
+폴더 파란색, 파일 흰색, 실행 파일 초록색  
+-l 상세 표기  
+-a 숨김 파일 출력  
   
+명령어 --help  
+명령어에 대한 상세 설명 확인 가능  
+
+mkdir (MAKE directory) 
+폴더를 만드는 명령어  
+-p 폴더 옵션
+mkdir -p 폴더1/폴더2
+
+touch 파일의 최종 수정 시간 변경 , 새 파일 생성  
+code (vscode 확장 명령어) touch와 같은 기능, vscode에서 실행시킴.  
+  
+echo  
+파일 또는 터미널에 특정 내용 출력  
+cat  
+파일 내부의 내용을 출력해주는 명령어  
+  
+cp  
+파일 또는 폴더를 복사하는 명령어  
+-r 옵션을 사용하면 디렉터리와 그 안의 모든 내용(하위 디렉터리, 파일 등)을 복사할 수 있음
+$cp -r [복사할 디렉토리][목적지 디렉토리]  
+
+mv(move)  
+파일 및 폴더 이동 명령어  
+이름 바꿀 때 사용  
+  
+rm (remove file)  
+파일 및 폴더 삭제 명령어  
+-r 폴더 삭제 시 필요 옵션
+-f 폴더 없어도 무시하고 진행 옵션  
