@@ -231,4 +231,24 @@ hostname
 $ hostname i  
 ip주소(ros 환경에서 중요하게 사용함)  
 
+SSH  
+IP 일때 UI 없이 터미널로만 원격 제어  
+vscode의 경우 모니터없이 불가능 = VI나 nano 편집기를 사용해야함.   
+모니터가 없는 경우 = 냉장고나 세탁기 같은 임베디드 시스템들, 실습에 사용할 자동차 플랫폼  
+  
+sudo apt install ssh  
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
