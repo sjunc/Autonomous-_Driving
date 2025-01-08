@@ -42,7 +42,7 @@ services: 입력이 있을 때만 동작하는 형태의 데어터, 송수신을
 양방향 통신으로 노드간의 통신 요청과 동시에 응답하여 처리가 필요한 경우 사용  
 *Topics*: 메세지를 식별하기 위해 이름을 붙여놓은 것. 보내는 것을 Publish, 받는 것 Subscribe  
 단방향 통신으로 연속적으로 데이터를 송수신, 한 번 접속 시 지속적으로 데이터 송수신(보내는 노드 publisher와 받는 노드 subsciber 가 존재)  
-ex) 카메라나 센서 같은 경우는 대부분 Publisher, cmd_vel 속도명령을 대기하고 있는 subsciber
+ex) 카메라나 센서 같은 경우는 대부분 Publisher, cmd_vel 속도명령을 대기하고 있는 subsciber  
 Action: service와 유사, 장기적으로 수행되는 프로세스에서 피드백을 제공하는 양방향 통신.  
 ex) 서울에서 부산까지 5번에 나눠 갈 때, 지점 1까지 가기전엔 계속 하던 거 실행  
 
@@ -103,12 +103,38 @@ rostopic pub /turtle1/cmd_vel geometry_msgs/Twist
 우분투는 터미널 마다 초기화가 되므로 .bashrc를 수정하여서 모든 터미널에 적용할 수 있다.  
 처음이후는 WIFI 접속을 변경할 때, MASTER를 변경할 때, 혼자서 테스트 진행할 때(MASTER=IP, 혹은 export 한 부분을 주석처리) 주소를 변경해주면 된다.  
 
-
-
-
-
-
-
+#### ros 명령어  
+rosservice  
+등록된 Service를 다루는 명령어   
+*rosnode*  
+등록된 Node를 다루는 명령어  
+*rosparam* 
+등록된 parameter를 다루는 명령어  
+*rosbag*  
+등록된 Topic들을 저장 및 재생하기 위한 명령어  
+*rosmsg*  
+등록된 Message 유형을 다루는 명령어  
+rosrv  
+등록된 서비스 유형을 다루는 명령어  
+*catkin_create_pkg*  
+새로운 패키지를 생성하는 명령어  
+*catkin_make*  
+mkdir을 통해 ros 안에 폴더를 생성해 준 후 입력  
+catkin 작업 공간의 C++ 파일을 빌드하는 명령어  
+source devel/setup.bash 빌드 후  
+  
+rospack  
+파일 시스템에서 사용가능한 패키지의 정보를 검색하기 위한 명령어  
+*rosdep*  
+시스템 의존성 파일들을 설치하기 위한 명령어  
+rosdep update  
+rosdep install --from-paths src --ignore-src -y -r  
+*rviz*  
+3D 시각화를 위한 rviz를 실행하는 명령어  
+센서가 받아들이는 방법에 대해  
+*rqt*  
+데이터 시각화를 위한 rqt를 실행하는 명령어  
+데이터에 대한 것 위주로  
 
 
 
