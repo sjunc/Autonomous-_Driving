@@ -75,3 +75,46 @@ publish 시킬 것을 입력
 info로 확인하면 
 echo를 통해선 subsciber가 나 스스로 pub에선 publisher의 내가 나옴  
 
+작동중인 터미널 종료  
+Ctrl + C  
+
+roscore로 master를 선언, 로컬 환경에선 본인이 master이자 slave 
+
+$ code ~/.bashrc
+$ nano ~/.bashrc
+~ 상대경로  . 숨겨진 파일
+code 혹은 nano 편집기로 열기
+
+각종 센서를 통해서 데이터를 가져오고 subscribe 하는 부분에 대해 publish를 진행함.  
+
+마스터
+export ROS_MASTER_URI=http://192.168.0.5:11311
+echo $ROS_MASTER_URI  
+슬레이브
+export ROS_IP=192.168.0.5
+echo $ROS_IP
+
+rostopic list  
+를 확인하면 연결된 것을 확인할 수 있다.  
+  
+rostopic pub /turtle1/cmd_vel geometry_msgs/Twist  
+설정을 통해서 거북이를 원격으로 움직이는 걸 확인 가능하다.
+
+우분투는 터미널 마다 초기화가 되므로 .bashrc를 수정하여서 모든 터미널에 적용할 수 있다.  
+처음이후는 WIFI 접속을 변경할 때, MASTER를 변경할 때, 혼자서 테스트 진행할 때(MASTER=IP, 혹은 export 한 부분을 주석처리) 주소를 변경해주면 된다.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
