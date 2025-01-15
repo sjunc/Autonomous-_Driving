@@ -74,17 +74,18 @@ rostopic info /turtle1/Pose 정보 확인
 데이터 turtlesim의 msg 중 pose 데이터 형태를 import from turtlesim.msg import Pose    
 callback 함수 수정 msg에 속한 것들 중   
 Subscriber 설정 sub = rospy.Subscriber("/turtle1/pose", Pose, callback)  
- 1. 경로 변경, 2. 데이터 방식 변경, 3. callback 함수 호출
+ 1. 경로 변경, 2. 데이터 방식 변경, 3. callback 함수 호출  
 
 Class화 시키기  
-
-
-
+  
+  
+  
 ##### 여담
 .bashrc 에는 단축어나 사전 설정할 내용들을 넣는다.  
 축약어는  
 alias 축약 = '명령어'  
-class로 사용하기  
 
-
-
+ifconfig  
+hostname -i
+192.168.0.12  
+0.37  

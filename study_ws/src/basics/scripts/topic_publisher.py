@@ -5,7 +5,7 @@ from std_msgs.msg import Int32                              # censor나 수많�
 
 rospy.init_node('topic_publisher')                          # init(초기화) 'topic_publisher'란 이름으로 node를 초기화, 정의 시켰음. 
 
-pub = rospy.Publisher('counter', Int32, queue_size=1)                  # publish 기능을 가진 'counter'는 Int32데이터를 가진 counter란 이름의 데이터를 전달
+pub = rospy.Publisher('counter', Int32, queue_size=1)       # publish 기능을 가진 'counter'는 Int32데이터를 가진 counter란 이름의 데이터를 전달
 
 rate = rospy.Rate(2)                                        # 초당 2번 전달
 
