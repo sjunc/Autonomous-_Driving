@@ -72,3 +72,26 @@ intensities: [0.0, 54.0, 56.0, 56.0, 55.0, 54.0, 53.0, 54.0, 52.0, 51.0, 51.0, 5
 rosrun rqt_image_view rqt_image_view  
 rqt 중 이미지 뷰 툴 실행  
 크게 rgb 토픽과 depth 토픽으로 이루어짐  
+  
+
+ rostopic info /camera/color/image_raw/compressed  
+Type: sensor_msgs/CompressedImage  (타입 이름)
+
+Publishers: 
+ * /image_transport (http://192.168.0.23:42361/) (publish 노드명, MASTER 주소)  
+
+Subscribers: None
+
+
+publish node명은 내가 설정하지만 subscribe 할 땐 작성된 노드명이 필요  
+
+
+## SLAM  
+Simultaneous Localization and Mapping  
+1970년대 달 및 화성 탐사를 위한 ROVER 기반의 자율 주행 기술의 연구가 이루어졌었음. 카메라와 센서를 이용해서 얻은 측정정보로 위치를 추정하는 방법  
+핵심은 Localization 내 위치 파악  
+다양한 센서를 활용한 기술들이 존재  
+camera slam, lidar slam 등등  
+Lidar만 사용하는 Hector SLAM  
+라이다와 필터링 하지 않은 odometry(주행기록치)값을 사용하는 G-Mapping  
+라이다와 필터링한 odometry(주행기록치)값을 사용하는 G-Mapping  

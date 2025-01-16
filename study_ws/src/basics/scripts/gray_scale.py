@@ -8,7 +8,7 @@ import numpy as np
 
 class Gray_scale:
     def __init__(self):
-        rospy.init_node("image_node")
+        rospy.init_node("image_node", anonymous=False)
         self.image_pub = rospy.Publisher("gray_img", Image, queue_size= 10)
         self.rate = rospy.Rate(10)
     def image(self):
@@ -22,7 +22,7 @@ class Gray_scale:
         ], np.uint8,
         )
 
-        bridge = CvBridge()
+        bridge = CvBridge()                         #python과 ros 사이의 이미지 출력방식 연결 다리 클래스
         ros_image = bridge.cv2_to_imgmsg(gray)
         gray_image = bridge.imgmsg_to_cv2(ros_image)
         cv2.imshow("Image", gray_image)
